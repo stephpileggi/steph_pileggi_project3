@@ -1,0 +1,105 @@
+$primaryColor: #b9dde7;
+$accentColor: #f38d8d;
+$fontColor: #171717;
+
+@mixin primaryFont($size, $lineheight) {
+    font-family: 'Oswald', sans-serif;
+    color: $fontColor;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: $size;
+    line-height: $lineheight;
+}
+
+@mixin secondaryFont {
+    font-family: 'Cabin', sans-serif;
+    color: $fontColor;
+    font-size: 2rem;
+    line-height: 32px;
+}
+
+@mixin globalBtn {
+    @include primaryFont(2rem, 29px);
+    background: $accentColor;
+    padding: 10px 33px;
+    display: inline-block;
+    &:hover {
+        background: #ee5d5d;
+    }
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.8rem;
+}
+
+ul, li {
+	padding: 0;
+	margin: 0;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.skip-link {
+    position: absolute;
+    left: -1000px;
+    top: 5px;
+    z-index: 999;
+    background: white;
+    color: black;
+}
+
+.skip-link:focus {
+    left: 0;
+}
+
+.visuallyhidden:not(:focus):not(:active) {
+     position: absolute;
+     width: 1px;
+     height: 1px;
+     margin: -1px;
+     border: 0;
+     padding: 0;
+     white-space: nowrap;
+     clip-path: inset(100%);
+     clip: rect(0 0 0 0);
+     overflow: hidden;
+}
+
+// typography styles
+
+h1, h2, h3, h4, h5, h6, p {
+	padding: 0;
+    margin: 0;
+}
+
+h1 {
+    @include primaryFont(15rem, 92px);
+}
+
+h2 {
+    @include primaryFont(4.2rem, 0);
+}
+
+h2 {
+    @include primaryFont(3.2rem, 0);
+}
+
+p {
+    @include secondaryFont;
+}
+
+// layout styles
+
+.wrapper {
+    max-width: 1300px;
+    margin: 0 auto;
+    width: 80%;
+}
