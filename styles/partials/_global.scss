@@ -1,13 +1,17 @@
-$primaryColor: #b9dde7;
+$primaryColor: #5C7788;
 $accentColor: #f38d8d;
 $fontColor: #171717;
 
+
+@font-face {
+font-family: Barley;
+src: url(../fonts/BarleyScript.ttf);
+}
+
 @mixin primaryFont($size, $lineheight) {
-    font-family: 'Oswald', sans-serif;
-    color: $fontColor;
+    font-family: 'Roboto', sans-serif;
+    color: #fcfcfc;
     letter-spacing: 1px;
-    font-weight: bold;
-    text-transform: uppercase;
     font-size: $size;
     line-height: $lineheight;
 }
@@ -35,6 +39,9 @@ html {
 
 body {
     font-size: 1.8rem;
+    background: url(../images/bg.png) no-repeat;
+    background-size: cover;
+    width: 100%;
 }
 
 ul, li {
@@ -75,17 +82,23 @@ a {
 
 // typography styles
 
+
+
 h1, h2, h3, h4, h5, h6, p {
 	padding: 0;
     margin: 0;
 }
 
 h1 {
-    @include primaryFont(15rem, 92px);
+    font-family: 'Pacifico', sans-serif;
+    color: white;
+    font-size: 14rem;
 }
 
 h2 {
-    @include primaryFont(4.2rem, 0);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 5.2rem;
 }
 
 h2 {
@@ -102,4 +115,8 @@ p {
     max-width: 1300px;
     margin: 0 auto;
     width: 80%;
+}
+
+fieldset {
+    padding: 400px 0;
 }

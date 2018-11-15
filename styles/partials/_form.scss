@@ -1,0 +1,14 @@
+fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+.question-box {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 20px 50px;
+    color: #545454;
+    width: 400px;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
