@@ -1,35 +1,33 @@
-$primaryColor: #5C7788;
-$accentColor: #f38d8d;
-$fontColor: #171717;
+$primaryColor: #ABC6D1;
+$fontColorDark: #545454;
+$fontColorLight: #fcfcfc;
+$hoverColor: #5C7788;
 
 
-@font-face {
-font-family: Barley;
-src: url(../fonts/BarleyScript.ttf);
-}
-
-@mixin primaryFont($size, $lineheight) {
-    font-family: 'Roboto', sans-serif;
-    color: #fcfcfc;
+@mixin primaryFont($size, $color) {
+    font-family: 'Nunito Sans', sans-serif;
+    color: $color;
     letter-spacing: 1px;
     font-size: $size;
-    line-height: $lineheight;
 }
 
 @mixin secondaryFont {
-    font-family: 'Cabin', sans-serif;
-    color: $fontColor;
-    font-size: 2rem;
-    line-height: 32px;
+    font-family: 'Pacifico', cursive;
+    color: #fcfcfc;
+    font-size: 12rem;
 }
 
 @mixin globalBtn {
-    @include primaryFont(2rem, 29px);
-    background: $accentColor;
-    padding: 10px 33px;
+    @include primaryFont(3rem, $fontColorLight);
+    background: $primaryColor;
+    padding: 25px 80px;
+    text-transform: uppercase;
+    color: $fontColorLight;
     display: inline-block;
+    border: none;
+    border-radius: 5px;
     &:hover {
-        background: #ee5d5d;
+        background: $hoverColor;
     }
 }
 
@@ -39,7 +37,7 @@ html {
 
 body {
     font-size: 1.8rem;
-    background: url(../images/bg.png) no-repeat;
+    background: url(../images/background.png) no-repeat;
     background-size: cover;
     width: 100%;
 }
@@ -52,19 +50,6 @@ ul, li {
 a {
     text-decoration: none;
     cursor: pointer;
-}
-
-.skip-link {
-    position: absolute;
-    left: -1000px;
-    top: 5px;
-    z-index: 999;
-    background: white;
-    color: black;
-}
-
-.skip-link:focus {
-    left: 0;
 }
 
 .visuallyhidden:not(:focus):not(:active) {
@@ -82,31 +67,23 @@ a {
 
 // typography styles
 
-
-
 h1, h2, h3, h4, h5, h6, p {
 	padding: 0;
     margin: 0;
 }
 
 h1 {
-    font-family: 'Pacifico', sans-serif;
-    color: white;
-    font-size: 14rem;
+    @include secondaryFont;
+    line-height: 1.2;
 }
 
 h2 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    font-size: 5.2rem;
-}
-
-h2 {
-    @include primaryFont(3.2rem, 0);
+    @include primaryFont(3rem, $fontColorLight)
 }
 
 p {
-    @include secondaryFont;
+    @include primaryFont(4rem, $fontColorLight);
+    font-weight: 300;
 }
 
 // layout styles
@@ -117,6 +94,5 @@ p {
     width: 80%;
 }
 
-fieldset {
-    padding: 400px 0;
-}
+
+

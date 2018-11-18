@@ -21,53 +21,70 @@ const lures = {
         {
             weather: 'hot',
             fish: 'pickeral',
-            bottom: 'rocks'
+            bottom: 'rocky'
         }
     ],
-
+    hardBait: [
+        {
+            weather: 'cold',
+            fish: 'bass',
+            bottom: 'rocky'
+        },
+        {
+            weather: 'overcast',
+            fish: 'bass',
+            bottom: 'rocky'  
+        }
+    ]
 };
 
 $(function() {
 //user will submit the choices
     $('form').on('submit', function(event) {
         event.preventDefault();
-//capture values of clicked radio buttons
-    const weatherChoice = $('input[type=radio][name=weather]:checked').val();
-    const fishChoice = $('input[type=radio][name=fish]:checked').val();
-    const floorChoice = $('input[type=radio][name=floor]:checked').val();
+    //capture values of clicked radio buttons
+        const weatherChoice = $('input[type=radio][name=weather]:checked').val();
+        const fishChoice = $('input[type=radio][name=fish]:checked').val();
+        const floorChoice = $('input[type=radio][name=floor]:checked').val();
 
 
-//for each key in the lure object 
-// for(lure in lures){
-//     // console.log('lure in lures', lures[lure]);
-//     //loop over all options in array
-//     for(let i=0; i < lures[lure].length; i++) {
-//         // console.log(i);
-//         const possibilities = lures[lure][i];
-//         //check if weather === userChoices.weather
-//         const lureWeather = lures[lure][i].weather;
-//         const lureFish = lures[lure][i].fish;
-//         const lureFloor = lures[lure][i].bottom;
-
-//         // console.log('info from object',lureWeather);
-//         // console.log('user choice',weatherChoice);
-//         if(lureWeather === weatherChoice) {
-//             if (lureFish === fishChoice) {
-//                 if(lureFloor === floorChoice) {
-//                     // console.log('yes');      
-//                 }
-//             }   
-//         } 
-//     }
-// }
-
-    for(lure in lures.spinner) {
-        console.log(lures.spinner[lure]);
-        for(let i = 0; i < lure.spinner[lure])
-    }
-  
+        // for each key in the lure object 
+        for(lure in lures) {
+            //loop over all options in array
+            for(let i=0; i < lures[lure].length; i++) {
+        //check if weather === userChoices.weather
+                const lureWeather = lures[lure][i].weather;
+                const lureFish = lures[lure][i].fish;
+                const lureFloor = lures[lure][i].bottom;
+                
 
 
-    })
+                if(lureWeather === weatherChoice && lureFish === fishChoice && lureFloor === floorChoice) {
+                    // console.log('lure', lure);
+                    const matchingLure = lure;
+                    console.log(matchingLure);
+                    
+                    // if (lure  === 'spinner') {
+                    //     $('.results').html('<h2>' + 'spinner' + '</h2>');
+                    // } else if (lure  === 'jig') {
+                    //     $('.results').html('<h2>' + 'jig' + '</h2>');
+                    // } else if (lure  === 'hardBait') {
+                    //     $('.results').html('<h2>' + 'Hard Bait' + '</h2>');
+                    // } else {
+                    //     console.log('do nothing');
+                    // }
+                    $('.results').html(`<img src="${matchingLure}.png>"`);
+                    return;
+                    
+                } //else {
+                //     console.log('does not match', lure)
+                // }
+
+
+                
+                
+            }//ends for loop (array)
+        }//ends for in loop (object)
+    })//ends event listener
 
 });//end code
