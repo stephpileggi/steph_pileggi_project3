@@ -11,10 +11,10 @@ $hoverColor: #5C7788;
     font-size: $size;
 }
 
-@mixin secondaryFont {
+@mixin secondaryFont($size) {
     font-family: 'Pacifico', cursive;
     color: #fcfcfc;
-    font-size: 12rem;
+    font-size: $size;
 }
 
 @mixin globalBtn {
@@ -40,6 +40,7 @@ body {
     background: url(../images/background.png) no-repeat;
     background-size: cover;
     width: 100%;
+    min-height: 3000px;
 }
 
 ul, li {
@@ -73,7 +74,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 h1 {
-    @include secondaryFont;
+    @include secondaryFont(12rem);
     line-height: 1.2;
 }
 

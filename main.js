@@ -9,7 +9,7 @@ const lures = {
         {
             weather: 'hot',
             fish: 'trout',
-            bottom: 'gravel'
+            bottom: 'deep'
         }  
     ],
     jig: [
@@ -41,7 +41,9 @@ const lures = {
 $(function() {
 //user will submit the choices
     $('form').on('submit', function(event) {
+        $('html, body').animate({ scrollTop: $(document).height() }, 1000);
         event.preventDefault();
+
     //capture values of clicked radio buttons
         const weatherChoice = $('input[type=radio][name=weather]:checked').val();
         const fishChoice = $('input[type=radio][name=fish]:checked').val();
