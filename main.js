@@ -24,7 +24,7 @@ const lures = {
             bottom: 'rocky'
         }
     ],
-    hardBait: [
+    hardbait: [
         {
             weather: 'cold',
             fish: 'bass',
@@ -60,29 +60,13 @@ $(function() {
 
 
                 if(lureWeather === weatherChoice && lureFish === fishChoice && lureFloor === floorChoice) {
-                    // console.log('lure', lure);
                     const matchingLure = lure;
-                    console.log(matchingLure);
-                    
-                    // if (lure  === 'spinner') {
-                    //     $('.results').html('<h2>' + 'spinner' + '</h2>');
-                    // } else if (lure  === 'jig') {
-                    //     $('.results').html('<h2>' + 'jig' + '</h2>');
-                    // } else if (lure  === 'hardBait') {
-                    //     $('.results').html('<h2>' + 'Hard Bait' + '</h2>');
-                    // } else {
-                    //     console.log('do nothing');
-                    // }
-                    $('.results').html(`<img src="${matchingLure}.png>"`);
-                    return;
-                    
-                } //else {
-                //     console.log('does not match', lure)
-                // }
-
-
-                
-                
+   
+                    $('.results').html(`<p>You should use a ${matchingLure}</p>, <img src="images/${matchingLure}.png" alt="${matchingLure} lure" />`);
+                    return; 
+                } else {
+                    $('.results').html(`<p>You should use a worm</p>, <img src="images/worm.png" alt="worm" />`);
+                }                    
             }//ends for loop (array)
         }//ends for in loop (object)
     })//ends event listener

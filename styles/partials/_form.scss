@@ -42,45 +42,43 @@ main p {
     color: #fcfcfc;
 }
 
-
-
-
-.custom-button{
-    position: absolute;
-    border: 5px solid $primaryColor;
-    border-radius: 100%;
-    transition: border .25s linear;
-    height: 35px;
-    width: 35px;
-    top: 25px;
-    left: 50px;
+.question-box {
+    position: relative;
     
+    & input[type="radio"] + label::before {
+        content: '';
+        position: absolute;
+        border: 5px solid $primaryColor;
+        border-radius: 100%;
+        transition: border .25s linear;
+        height: 35px;
+        width: 35px;
+        top: 20px;
+        left: 80px; 
+    }
 }
 
-.custom-button:hover {
-    border: 5px solid $fontColorLight;
-}
 
-.custom-button::before {
-    position: absolute;
+
+.question-box input[type="radio"] + label::after {
     content: '';
+    position: absolute;
     display: block;
     border-radius: 100%;
     width: 20px;
     height: 20px;
-    top: 3px;
-    left: 3px;
+    top: 32px;
+    left: 92px;
     background-color: $primaryColor;
+    opacity: 0;
+
 }
 
-input[type=radio]:checked ~ .custom-button {
-  border: 5px solid #0DFF92;
+.question-box input[type="radio"]:checked + label::after {
+    opacity: 1;
+    transform: scale(1.5);
+    transition: transform 0.1s ease-in;   
 }
-
-input[type=radio]:checked ~ .custom-button::before{
-  background: purple;
-}
-
 
 .submit-container {
     display: flex;
@@ -92,52 +90,11 @@ input[type=radio]:checked ~ .custom-button::before{
     margin-top: 50px;
 }
 
+//results section
 
 
 
 
-
-// display: block;
-//   position: absolute;
-//   border: 5px solid #AAAAAA;
-//   border-radius: 100%;
-//   height: 25px;
-//   width: 25px;
-//   top: 30px;
-//   left: 20px;
-// 	z-index: 5;
-// 	transition: border .25s linear;
-// 	-webkit-transition: border .25s linear;
-
-// ul li:hover .check {
-//   border: 5px solid #FFFFFF;
-// }
-
-// ul li .check::before {
-//   display: block;
-//   position: absolute;
-// 	content: '';
-//   border-radius: 100%;
-//   height: 15px;
-//   width: 15px;
-//   top: 5px;
-// 	left: 5px;
-//   margin: auto;
-// 	transition: background 0.25s linear;
-// 	-webkit-transition: background 0.25s linear;
-// }
-
-// input[type=radio]:checked ~ .check {
-//   border: 5px solid #0DFF92;
-// }
-
-// input[type=radio]:checked ~ .check::before{
-//   background: #0DFF92;
-// }
-
-// input[type=radio]:checked ~ label{
-//   color: #0DFF92;
-// }
 
 
 
