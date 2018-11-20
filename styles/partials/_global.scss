@@ -20,7 +20,7 @@ $hoverColor: #5C7788;
 @mixin globalBtn {
     @include primaryFont(3rem, $fontColorLight);
     background: $primaryColor;
-    padding: 25px 80px;
+    padding: 15px 50px;
     text-transform: uppercase;
     color: $fontColorLight;
     display: inline-block;
@@ -40,7 +40,6 @@ body {
     background: url(../images/background.png) no-repeat;
     background-size: cover;
     width: 100%;
-    min-height: 3000px;
 }
 
 ul, li {

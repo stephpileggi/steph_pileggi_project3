@@ -1,4 +1,9 @@
+
 // HEADER
+body {
+    min-height: 3000px;
+}
+
 .header-content {
     float: left;
     padding: 50px 0 70px 0;
@@ -14,7 +19,7 @@ fieldset {
     display: flex;
     flex-direction: column;
     border: 0;
-    padding-bottom: 300px;
+    padding-bottom: 250px;
 }
 
 fieldset:last-child {
@@ -39,7 +44,20 @@ main p {
     text-align: center;
     @include primaryFont(3rem, $fontColorDark);
     position: relative;
-    
+
+    & input[type="radio"] {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+    }
+
     & input[type="radio"] + label::before {
         content: '';
         position: absolute;
@@ -55,22 +73,22 @@ main p {
     }
 
     & input[type="radio"] + label::after {
-        content: '';
-        position: absolute;
-        display: block;
-        border-radius: 100%;
-        width: 18px;
-        height: 18px;
-        top: 27px;
-        left: 54px;
-        background-color: $primaryColor;
-        opacity: 0;
+            content: '';
+            position: absolute;
+            display: block;
+            border-radius: 100%;
+            width: 18px;
+            height: 18px;
+            top: 27px;
+            left: 53px;
+            background-color: $primaryColor;
+            opacity: 0;
     }
 
     & input[type="radio"]:checked + label::after {
-        opacity: 1;
-        transform: scale(1.5);
-        transition: transform 0.1s ease-in;   
+            opacity: 1;
+            transform: scale(1.5);
+            transition: transform 0.1s ease-in;   
     }
 }
 
@@ -80,7 +98,6 @@ main p {
 }
 
 // RESULTS 
-
 .submit-container {
     display: flex;
     justify-content: center;
@@ -96,37 +113,171 @@ main p {
     padding: 50px 0;
 }
 
-
 // MEDIA QUERIES
 
 @media(max-width: 900px) {
     body {
-        min-height: 1000px;
+        min-height: 1800px;
     }
+
     .header-content {
         text-align: center;
         float: none;
         padding: 50px 0 30px 0;
     }
+
     fieldset {
         text-align: center;
         padding-bottom: 100px;
     }
+
     h1 {
-    @include secondaryFont(8rem);
-    line-height: 1.2;
+        @include secondaryFont(8rem);
+        line-height: 1.2;
     }
+
     h2 {
         @include primaryFont(2rem, $fontColorLight)
-        text-align: center;
+        // text-align: center;
     }
+
     p {
         @include primaryFont(3rem, $fontColorLight);
         font-weight: 300;
     }
+
+    main p {
+        padding-bottom: 10px;
+    }
+
+    .question-box {
+        padding: 10px 50px;
+        width: 400px;
+        margin: 8px auto;
+        @include primaryFont(2rem, $fontColorDark);
+
+    & input[type="radio"] + label::before {
+        border: 3px solid $primaryColor;
+        height: 20px;
+        width: 20px;
+    }
+
+    & input[type="radio"] + label::after {
+            width: 10.5px;
+            height: 10.5px;
+            top: 19px;
+            left: 47.5px;
+    }
+
+    & input[type="radio"]:checked + label::after {
+            opacity: 1;
+            transform: scale(1.5);
+            transition: transform 0.1s ease-in;   
+    }
+}
+    .global-btn {
+        @include globalBtn;
+        margin-top: 30px;
+        @include primaryFont(2rem, $fontColorLight);
+        background: $primaryColor;
+        padding: 15px 40px;
+    }
+
+    .results img {
+        max-width: 400px;
+    }
+} 
+
+@media (max-width: 676px) {
+    body {
+        min-height: 1750px;
+    }
+
+    fieldset {
+        padding-bottom: 110px;
+    }
+
+    .question-box {
+        padding: 10px 0px;
+        max-width: 400px;
+        margin: 10px auto;
+        @include primaryFont(1.8rem, $fontColorDark);
+
+        & input[type="radio"] + label::before {
+            border: 3px solid $primaryColor;
+            height: 18px;
+            width: 18px;
+            left: 40px;
+    }
+
+        & input[type="radio"] + label::after {
+            width: 9.5px;
+            height: 9.5px;
+            top: 18px;
+            left: 47px;
+        }
+    } 
+  
 }
 
+@media (max-width: 550px) {
+    .wrapper {
+        width: 90%;
+    }
 
+    fieldset {
+        padding-bottom: 120px;
+    }
+
+    h1 {
+        @include secondaryFont(6rem);
+        line-height: 1.2;
+    }
+
+    h2 {
+        @include primaryFont(2rem, $fontColorLight)
+        text-align: center;
+    }
+
+    p {
+        @include primaryFont(2rem, $fontColorLight);
+        font-weight: 300;
+        line-height: 1.3;
+    }
+
+    .question-box {
+        padding: 10px 20px;
+        width: 280px;
+        margin: 10px auto;
+        @include primaryFont(1.8rem, $fontColorDark);
+
+    & input[type="radio"] + label::before {
+            border: 3px solid $primaryColor;
+            height: 18px;
+            width: 18px;
+            left: 10px;
+        }
+
+    & input[type="radio"] + label::after {
+            width: 8px;
+            height: 8px;
+            top: 19px;
+            left: 18px;
+        }
+    }
+    
+    .global-btn {
+        @include globalBtn;
+        margin-top: 30px;
+        @include primaryFont(2rem, $fontColorLight);
+        background: $primaryColor;
+        padding: 10px 30px;
+    }
+
+    .results img {
+        max-width: 200px;
+    }
+}
 
 
 

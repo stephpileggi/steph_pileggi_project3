@@ -21,29 +21,24 @@
     <main>
         <section class="questions wrapper">
             <form action="#" class="custom-radio">
-                <fieldset class="weatherType">
+                <fieldset class="weatherType float-panel">
                     <h2>Question 1 of 3</h2>
                     <p>What is the forecast today?</p>
-                    
                     <div class="question-box">
-                        <input type="radio" name="weather" id="hot" class="visuallyhidden" value="hot">
+                        <input type="radio" name="weather" id="hot" value="hot">
                         <label for="hot">Sunny and calm</label>
-                        <div class="custom-button"></div>
                     </div>
                     <div class="question-box">
-                        <input type="radio" name="weather" id="cold" class="visuallyhidden" value="cold">
+                        <input type="radio" name="weather" id="cold" value="cold">
                         <label for="cold">Winter</label>
-                        <div class="custom-button"></div>
                     </div>
                     <div class="question-box"> 
-                        <input type="radio" name="weather" id="clouds" class="visuallyhidden" value="clouds">
-                        <label for="clouds">Mixed clouds with light waves</label>
-                        <div class="custom-button"></div>
+                        <input type="radio" name="weather" id="clouds" value="clouds">
+                        <label for="clouds">Mixed clouds with waves</label>
                     </div>
                     <div class="question-box">
-                        <input type="radio" name="weather" id="overcast" class="visuallyhidden" value="wind">
-                        <label for="overcast">Overcast with waves</label> 
-                        <div class="custom-button"></div>
+                        <input type="radio" name="weather" id="overcast" value="overcast">
+                        <label for="overcast">Overcast with waves</label>   
                     </div>          
                 </fieldset>
 
@@ -51,24 +46,20 @@
                     <h2>Question 2 of 3</h2>
                     <p>What are you fishing for?</p>
                     <div class="question-box">
-                        <input type="radio" name="fish" id="bass" class="visuallyhidden" value="bass">
+                        <input type="radio" name="fish" id="bass" value="bass">
                         <label for="bass">Bass</label>
-                        <div class="custom-button"></div>
                     </div>
                     <div class="question-box">
-                        <input type="radio" name="fish" id="pike" class="visuallyhidden" value="pike">
+                        <input type="radio" name="fish" id="pike" value="pike">
                         <label for="pike">Pike</label>
-                        <div class="custom-button"></div>
                     </div>
                     <div class="question-box">
-                        <input type="radio" name="fish" id="trout" class="visuallyhidden" value="trout">
-                        <label for="trout">Trout</label>
-                        <div class="custom-button"></div>             
+                        <input type="radio" name="fish" id="trout" value="trout">
+                        <label for="trout">Trout</label>           
                     </div>
                     <div class="question-box">
-                        <input type="radio" name="fish" id="perch" class="visuallyhidden" value="perch">
+                        <input type="radio" name="fish" id="perch" value="perch">
                         <label for="perch">Perch</label>
-                        <div class="custom-button"></div>
                     </div>
                 </fieldset>
 
@@ -76,38 +67,33 @@
                     <h2>Question 3 of 3</h2>
                     <p>What is the ecosystem like?</p>
                     <div class="question-box">
-                        <input type="radio" name="floor" id="rocky" class="visuallyhidden" value="rocky">
+                        <input type="radio" name="floor" id="rocky" value="rocky">
                         <label for="rocky">Stone or wood objects</label>
-                        <div class="custom-button"></div>
                     </div>
                     <div class="question-box">
-                        <input type="radio" name="floor" id="sandy" class="visuallyhidden" value="sandy">
+                        <input type="radio" name="floor" id="sandy" value="sandy">
                         <label for="sandy">Sandy with vegetation</label>
-                        <div class="custom-button"></div>
                     </div>
                     <div class="question-box">
-                        <input type="radio" name="floor" id="weedy" class="visuallyhidden" value="weedy">
+                        <input type="radio" name="floor" id="weedy" value="weedy">
                         <label for="weedy">Shallow with weeds</label>
-                        <div class="custom-button"></div>
                     </div>
                     <div class="question-box">
-                        <input type="radio" name="floor" id="deep" class="visuallyhidden" value="deep">
+                        <input type="radio" name="floor" id="deep" value="deep">
                         <label for="deep">Too deep to tell</label>
-                        <div class="custom-button"></div>
                     </div>
                     <div class="submit-container">
-                        <input type="submit" class="global-btn scroll" value="Find lure!">
+                        <input type="submit" class="global-btn" value="Find lure!">
                     </div>
                 </fieldset>
             </form>
         </section>
-        <section class="results">
+        <section class="results-container wrapper">
+            <div class="results">
+            </div>
         </section>
     </main>
-
-    <footer>
-
-    </footer>
+        
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
     <script src="main.js"></script>
 </body>

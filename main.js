@@ -2,39 +2,89 @@
 const lures = {
     spinner: [
         {
+            weather: 'clouds',
+            fish: 'bass',
+            bottom: 'sandy'  
+        },
+        {
+            weather: 'overcast',
+            fish: 'pike',
+            bottom: 'sandy'
+        },
+        {
+            weather: 'clouds',
+            fish: 'pike',
+            bottom: 'deep'
+        },
+        {
+            weather: 'clouds',
+            fish: 'perch',
+            bottom: 'sandy'
+        },
+        {
+            weather: 'overcast',
+            fish: 'perch',
+            bottom: 'deep'
+        },    
+    ],
+    jig: [
+        {
+            weather: 'overcast',
+            fish: 'bass',
+            bottom: 'sandy'
+        },
+        {
+            weather: 'cold',
+            fish: 'trout',
+            bottom: 'deep'
+        },
+        {
+            weather: 'cold',
+            fish: 'pike',
+            bottom: 'deep'
+        },
+        {
+            weather: 'clouds',
+            fish: 'pike',
+            bottom: 'sandy'
+        },
+        {
+            weather: 'cold',
+            fish: 'perch',
+            bottom: 'deep'
+        },
+        {
+            weather: 'overcast',
+            fish: 'perch',
+            bottom: 'sandy'
+        },
+    ],
+    hardbait: [
+        {
             weather: 'hot',
+            fish: 'bass',
+            bottom: 'sandy'
+        },
+        {
+            weather: 'clouds',
             fish: 'bass',
             bottom: 'rocky'  
         },
-        {
-            weather: 'hot',
-            fish: 'trout',
-            bottom: 'deep'
-        }  
-    ],
-    jig: [
         {
             weather: 'hot',
             fish: 'pike',
             bottom: 'sandy'
         },
         {
-            weather: 'hot',
-            fish: 'pickeral',
-            bottom: 'rocky'
-        }
-    ],
-    hardbait: [
-        {
-            weather: 'cold',
-            fish: 'bass',
+            weather: 'clouds',
+            fish: 'pike',
             bottom: 'rocky'
         },
         {
-            weather: 'overcast',
-            fish: 'bass',
-            bottom: 'rocky'  
-        }
+            weather: 'hot',
+            fish: 'trout',
+            bottom: 'deep'
+        },
     ]
 };
 
@@ -74,3 +124,5 @@ $(function() {
     })//ends event listener
 
 });//end code
+
+

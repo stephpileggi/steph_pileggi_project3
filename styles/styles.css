@@ -140,8 +140,7 @@ body {
   font-size: 1.8rem;
   background: url(../images/background.png) no-repeat;
   background-size: cover;
-  width: 100%;
-  min-height: 3000px; }
+  width: 100%; }
 
 ul, li {
   padding: 0;
@@ -192,6 +191,9 @@ p {
   margin: 0 auto;
   width: 80%; }
 
+body {
+  min-height: 3000px; }
+
 .header-content {
   float: left;
   padding: 50px 0 70px 0; }
@@ -209,7 +211,7 @@ fieldset {
   -ms-flex-direction: column;
   flex-direction: column;
   border: 0;
-  padding-bottom: 300px; }
+  padding-bottom: 250px; }
 
 fieldset:last-child {
   padding-bottom: 0px; }
@@ -233,6 +235,18 @@ main p {
   letter-spacing: 1px;
   font-size: 3rem;
   position: relative; }
+  .question-box input[type="radio"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden; }
   .question-box input[type="radio"] + label::before {
     content: '';
     position: absolute;
@@ -256,7 +270,7 @@ main p {
     width: 18px;
     height: 18px;
     top: 27px;
-    left: 54px;
+    left: 53px;
     background-color: #ABC6D1;
     opacity: 0; }
   .question-box input[type="radio"]:checked + label::after {
@@ -288,7 +302,7 @@ main p {
   letter-spacing: 1px;
   font-size: 3rem;
   background: #ABC6D1;
-  padding: 25px 80px;
+  padding: 15px 50px;
   text-transform: uppercase;
   color: #fcfcfc;
   display: inline-block;
@@ -304,7 +318,7 @@ main p {
 
 @media (max-width: 900px) {
   body {
-    min-height: 1000px; }
+    min-height: 1800px; }
   .header-content {
     text-align: center;
     float: none;
@@ -321,11 +335,151 @@ main p {
     font-family: 'Nunito Sans', sans-serif;
     color: #fcfcfc;
     letter-spacing: 1px;
+    font-size: 2rem; }
+  p {
+    font-family: 'Nunito Sans', sans-serif;
+    color: #fcfcfc;
+    letter-spacing: 1px;
+    font-size: 3rem;
+    font-weight: 300; }
+  main p {
+    padding-bottom: 10px; }
+  .question-box {
+    padding: 10px 50px;
+    width: 400px;
+    margin: 8px auto;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #545454;
+    letter-spacing: 1px;
+    font-size: 2rem; }
+    .question-box input[type="radio"] + label::before {
+      border: 3px solid #ABC6D1;
+      height: 20px;
+      width: 20px; }
+    .question-box input[type="radio"] + label::after {
+      width: 10.5px;
+      height: 10.5px;
+      top: 19px;
+      left: 47.5px; }
+    .question-box input[type="radio"]:checked + label::after {
+      opacity: 1;
+      -webkit-transform: scale(1.5);
+      -ms-transform: scale(1.5);
+      transform: scale(1.5);
+      -webkit-transition: -webkit-transform 0.1s ease-in;
+      transition: -webkit-transform 0.1s ease-in;
+      -o-transition: transform 0.1s ease-in;
+      transition: transform 0.1s ease-in;
+      transition: transform 0.1s ease-in, -webkit-transform 0.1s ease-in; }
+  .global-btn {
+    font-family: 'Nunito Sans', sans-serif;
+    color: #fcfcfc;
+    letter-spacing: 1px;
+    font-size: 3rem;
+    background: #ABC6D1;
+    padding: 15px 50px;
+    text-transform: uppercase;
+    color: #fcfcfc;
+    display: inline-block;
+    border: none;
+    border-radius: 5px;
+    margin-top: 30px;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #fcfcfc;
+    letter-spacing: 1px;
+    font-size: 2rem;
+    background: #ABC6D1;
+    padding: 15px 40px; }
+    .global-btn:hover {
+      background: #5C7788; }
+  .results img {
+    max-width: 400px; } }
+
+@media (max-width: 676px) {
+  body {
+    min-height: 1750px; }
+  fieldset {
+    padding-bottom: 110px; }
+  .question-box {
+    padding: 10px 0px;
+    max-width: 400px;
+    margin: 10px auto;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #545454;
+    letter-spacing: 1px;
+    font-size: 1.8rem; }
+    .question-box input[type="radio"] + label::before {
+      border: 3px solid #ABC6D1;
+      height: 18px;
+      width: 18px;
+      left: 40px; }
+    .question-box input[type="radio"] + label::after {
+      width: 9.5px;
+      height: 9.5px;
+      top: 18px;
+      left: 47px; } }
+
+@media (max-width: 550px) {
+  .wrapper {
+    width: 90%; }
+  fieldset {
+    padding-bottom: 120px; }
+  h1 {
+    font-family: 'Pacifico', cursive;
+    color: #fcfcfc;
+    font-size: 6rem;
+    line-height: 1.2; }
+  h2 {
+    font-family: 'Nunito Sans', sans-serif;
+    color: #fcfcfc;
+    letter-spacing: 1px;
     font-size: 2rem;
     text-align: center; }
   p {
     font-family: 'Nunito Sans', sans-serif;
     color: #fcfcfc;
     letter-spacing: 1px;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.3; }
+  .question-box {
+    padding: 10px 20px;
+    width: 280px;
+    margin: 10px auto;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #545454;
+    letter-spacing: 1px;
+    font-size: 1.8rem; }
+    .question-box input[type="radio"] + label::before {
+      border: 3px solid #ABC6D1;
+      height: 18px;
+      width: 18px;
+      left: 10px; }
+    .question-box input[type="radio"] + label::after {
+      width: 8px;
+      height: 8px;
+      top: 19px;
+      left: 18px; }
+  .global-btn {
+    font-family: 'Nunito Sans', sans-serif;
+    color: #fcfcfc;
+    letter-spacing: 1px;
     font-size: 3rem;
-    font-weight: 300; } }
+    background: #ABC6D1;
+    padding: 15px 50px;
+    text-transform: uppercase;
+    color: #fcfcfc;
+    display: inline-block;
+    border: none;
+    border-radius: 5px;
+    margin-top: 30px;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #fcfcfc;
+    letter-spacing: 1px;
+    font-size: 2rem;
+    background: #ABC6D1;
+    padding: 10px 30px; }
+    .global-btn:hover {
+      background: #5C7788; }
+  .results img {
+    max-width: 200px; } }
